@@ -57,6 +57,10 @@ app.post('/api/refresh', (req, res) => {
     const newAccessToken = generateAccessToken(user.id);
     const newRefreshToken = generateRefreshToken(user.id);
     refreshTokens.push(newRefreshToken);
+    let index = refreshTokens.indexOf(refreshToken);
+    if (index !== -1) {
+      refreshTokens.splice(index, 1);
+    }
     res.status(200).json({
       accessToken: newAccessToken,
       refreshToken: newRefreshToken,
