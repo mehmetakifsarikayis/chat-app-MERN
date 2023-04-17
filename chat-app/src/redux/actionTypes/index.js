@@ -1,0 +1,9 @@
+const actionTypes = {
+  SET_ACCESS_TOKEN: 'SET_ACCESS_TOKEN',
+  SET_REFRESH_TOKEN: 'SET_REFRESH_TOKEN',
+  SET_NAME: 'SET_NAME',
+  SET_CHAT_USER: 'SET_CHAT_USER',
+  SET_AXIOSJWT: 'SET_AXIOSJWT',
+};
+
+export default actionTypes;
